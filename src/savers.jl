@@ -100,9 +100,7 @@ function save_res(v_res, key_CP, dict_NP, dict_NP2, dict_RP, dict_CP, v_ignore_p
     v_cp = [res["cp"] for res in v_res]
     for k_res in keys(v_res[1])
         if(k_res == "cp") continue end
-        # if(k_res ∉ v_savekeys) continue end
         resname = resultname(k_res, dict_NP, dict_NP2, dict_RP, dict_CP, v_ignore_params, format; data_dir=data_dir)
-        println("$(resname)")
         v_res_save = prepare_save_res(v_res, k_res, v_cp; rounddigits=rounddigits)
 
         if(issafe) 

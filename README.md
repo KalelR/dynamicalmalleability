@@ -1,22 +1,8 @@
-# dynamicalmalleability
+# Repository for relevant code studying dynamical malleability, especially in Kuramoto oscillators
 
-This code base is using the Julia Language and [DrWatson](https://juliadynamics.github.io/DrWatson.jl/stable/)
-to make a reproducible scientific project named
-> dynamicalmalleability
+Contains the basic code to run simulations of Kuramoto oscillator networks, with one script for plotting the spatiotemporal patterns of the phases.
 
-It is authored by Kalel.
+The code is divided into several different files, so I'd suggest using a code editor to open all of them. To run the basic simulation, execute the code in `allruns.jl` file, found in `data/inputs`, by simply copying and pasting the code there in a terminal. 
 
-To (locally) reproduce this project, do the following:
+This will execute the main script, entitle `kuramoto-run.jl`, which uses the basic simulation code in `kuramoto-makesims.jl`. The right hand side definition of the system is contained in `kuramoto.jl`. 
 
-0. Download this code base. Notice that raw data are typically not included in the
-   git-history and may need to be downloaded independently.
-1. Open a Julia console and do:
-   ```
-   julia> using Pkg
-   julia> Pkg.add("DrWatson") # install globally, for using `quickactivate`
-   julia> Pkg.activate("path/to/this/project")
-   julia> Pkg.instantiate()
-   ```
-
-This will install all necessary packages for you to be able to run the scripts and
-everything should work out of the box, including correctly finding local paths.

@@ -17,12 +17,9 @@ end
 specific function to name the results
 """
 function resultname(quantifier, dict_NP, dict_NP2, dict_RP, dict_CP, v_ignore_params, format=".csv"; data_dir="")
-	# dir = "$(mmodel)_$(mtop)-N_$(N)-k_$(k)-freqtype_$(mfreq)"
-	# dir = savename(dict_NP,equals="_", connector="-", sort=true, ignores=v_ignore_params, digits=20)
 	dir = savename(dict_NP,equals="_", connector="-", sort=true, ignores=v_ignore_params, digits=20)
 	subdir = savename(dict_NP2,equals="_", connector="-", sort=true, ignores=v_ignore_params, digits=20)
 	cp = savename(dict_CP,equals="_", connector="-", sort=true, ignores=v_ignore_params, digits=20)
-	# cp = key(dict_CP[1])
 	specifics = savename(dict_RP,equals="_", connector="-", sort=true, ignores=v_ignore_params, digits=20)
 	if data_dir == "" data_dir = datadir() end
 	name = "$(data_dir)/$(dir)/$(subdir)/$(quantifier)-control_$(cp)-$(specifics)$(format)"

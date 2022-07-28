@@ -1,7 +1,14 @@
 name = "dynamicalmalleability"
 authors = ["Kalel"]
-[compat]
-julia = "1.7.3"
-DrWatson = "2.9.1"
+
 [deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 DrWatson = "634d3b9d-ee7a-5ddf-bec9-22491ea816e1"
+LSODA = "7f56f5a3-f504-529b-bc02-0b1fe5e64312"
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+Tables = "bd369af6-aec1-5ad0-b16a-f7cc5008161c"
+
+[compat]
+DrWatson = "2.9.1"
+julia = "1.7.3"

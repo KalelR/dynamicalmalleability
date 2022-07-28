@@ -2,14 +2,15 @@
 using DrWatson
 @quickactivate "dynamicalmalleability"
 using LSODA, OrdinaryDiffEq, DelimitedFiles, Random, Tables, CSV
-const DIR = "$(pwd())/../../"
+const DIR = projectdir()
+const data_dir = "$(DIR)/data"
 include("$(DIR)/src/drwatson-organization.jl")
 include("$(DIR)/src/utils.jl")
 include("$(DIR)/src/savers.jl")
 include("$(DIR)/src/sims/Kuramoto/kuramoto.jl")
 include("$(DIR)/src/sims/Kuramoto/parameters.jl")
 include("$(DIR)/src/quantifiers.jl")
-include("$(DIR)/scripts/sims/Kuramoto/kuramoto-makesims.jl")
+include("$(DIR)/src/sims/Kuramoto/kuramoto-makesims.jl")
 include("$(DIR)/data/inputs/alldictionaries.jl")
 
 function main(ARGS)

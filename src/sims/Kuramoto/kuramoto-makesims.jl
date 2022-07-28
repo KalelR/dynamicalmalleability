@@ -1,4 +1,3 @@
-
 get_parameter(dict, parkey, par_default) = haskey(dict, parkey) ? dict[parkey] : par_default
 """
 Real simulation function: receives parameters for a single simulation, integrates it, does the required analysis, and returns the results in `res` and the trajectory solution in `sol`
